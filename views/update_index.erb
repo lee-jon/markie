@@ -1,0 +1,11 @@
+<h1>Updates!</h1>
+
+<ul>
+  <% directory_contents.each do |file| %>
+    <li>
+      <a href="/<%= file %>">
+        <%= post_title(file) %>
+      </a>
+    </li>
+  <% end %>
+</ul>
