@@ -1,0 +1,14 @@
+/* HELLO HUMANS HOW ARE YOU TODAY */
+/* humanstxt.org */
+
+/* PEOPLE */
+  Chef:Lee-Jon Ball
+  Contact: lee-jon.ball [at] alliants.com
+  Twitter: @tmesis
+  From: London, UK
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery, Orbit, Reveal
+  Software: Git, Sinatra
+  Coolshit: Markdown, Foundation, OmniAuth

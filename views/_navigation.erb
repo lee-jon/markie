@@ -1,0 +1,22 @@
+<nav class="top-bar" data-topbar data-options="is_hover: false">
+  <ul class="title-area">
+      <li class="name">
+      <h1><a href="#">Updates</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="has-dropdown">
+        <a href="#">Other updates</a>
+        <ul class="dropdown">
+          <% directory_contents.each do |file| %>
+            <li><a href="/<%= file %>">
+                <%= post_title(file) %></a></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>

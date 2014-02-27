@@ -1,18 +1,8 @@
 require 'spec_helper'
 
-describe "post_title" do
-  it "should remove underscores and capitalize" do
-    @filename = "hello_world!_the_second"
-    expect(post_title @filename).to eq("Hello world! the second")
-  end
-
-  it "should remove system filestructure" do
-    @filename = "updates/Hello"
-    expect(post_title @filename).to eq("Hello")
-  end
-end
-
-describe directory_contents do
+describe "directory_contents" do
+  include Helpers
+  
   it "should return an array of contents" do
     @dir = directory_contents
     expect(@dir.class).to eq(Array)

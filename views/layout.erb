@@ -3,8 +3,45 @@
 <html>
   <head>
     <title>Your friendly updates</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <script src="/js/vendor/modernizr.js"></script>
   </head>
   <body>
-    <%= yield %>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name"><h1><a href="#">Tech Updates</a></h1></li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="has-dropdown">
+            <a href="#">Other updates</a>
+            <ul class="dropdown">
+              <% directory_contents.each do |file| %>
+                <li><a href="/<%= file %>"><%= post_title(file) %></a></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="row">
+      <%= yield %>
+    </div>
+    
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/fastclick.js"></script>
+    <script src="/js/foundation/foundation.js"></script>
+    <script src="/js/foundation/foundation.topbar.js"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>

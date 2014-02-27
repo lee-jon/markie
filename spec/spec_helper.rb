@@ -3,7 +3,7 @@ require 'spork'
 ENV['RACK_ENV'] ||= 'test'
 
 Spork.prefork do
-  require './app.rb'
+  require './app'
 
   require 'rspec'
   require 'rack/test'
@@ -23,7 +23,7 @@ Spork.prefork do
   end
 
   def app
-    @app ||= Sinatra::Application
+    @app ||= TechUpdates.new
   end
 end
 
