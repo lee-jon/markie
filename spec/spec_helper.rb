@@ -1,31 +1,25 @@
-require 'spork'
-
 ENV['RACK_ENV'] ||= 'test'
 
-Spork.prefork do
-  require './app'
 
-  require 'rspec'
-  require 'rack/test'
-  require 'capybara'
-  require 'capybara/dsl'
+require './app'
 
-  Capybara.app = Sinatra::Application
+require 'rspec'
+require 'rack/test'
+require 'capybara'
+require 'capybara/dsl'
 
-  set :environment, :test
-  set :run, false
-  set :raise_errors, true
-  set :logging, false
+Capybara.app = Sinatra::Application
 
-  RSpec.configure do |config|
-    config.include Rack::Test::Methods
-    config.include Capybara::DSL
-  end
+set :environment, :test
+set :run, false
+set :raise_errors, true
+set :logging, false
 
-  def app
-    @app ||= TechUpdates.new
-  end
+RSpec.configure do |config|
+  config.include Rack::Test::Methods
+  config.include Capybara::DSL
 end
 
-Spork.each_run do
+def app
+  @app ||= TechUpdates.new
 end

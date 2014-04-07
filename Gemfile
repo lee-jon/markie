@@ -14,15 +14,8 @@ gem 'omniauth-google-apps'
 group :development, :test do
   gem 'rack-test'
   gem 'rspec'
-  gem 'rb-fsevent', :require => false
-  gem 'spork'
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'guard-spork'
 end
 
 group :test do
   gem 'capybara'
-  gem 'growl'
 end
-
