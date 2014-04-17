@@ -9,7 +9,4 @@ module Helpers
 
     ls
   end
-
-  def full_listing
-  end
 end
