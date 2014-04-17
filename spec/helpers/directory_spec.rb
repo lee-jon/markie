@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe "directory_contents" do
   include Helpers
-  
   it "should return an array of contents" do
     @dir = directory_contents
     expect(@dir.class).to eq(Array)
